@@ -27,11 +27,11 @@ def multiples_3_5(x):
     """
     numbers = []
     number = 3
-    while(number <= x):
+    while(number < x):
         numbers.append(number)
         number += 3
     number = 5
-    while(number <= x):
+    while(number < x):
         numbers.append(number)
         number += 5
     result = 0
