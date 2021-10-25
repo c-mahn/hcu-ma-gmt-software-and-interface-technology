@@ -4,17 +4,17 @@
 # Write a function that returns the sum of the multiples of 3 and 5
 
 
-# Autoren:
+# Author:
 # Christopher Mahn
 
 # #############################################################################
 
-# Import von Bibliotheken
+# Import of Libraries
 # -----------------------------------------------------------------------------
 
 import math as m
 
-# Funktionen
+# Functions
 # -----------------------------------------------------------------------------
 
 def multiples_3_5(x):
@@ -44,10 +44,10 @@ def lambda_function(a, b, c):
     return((m.sqrt(a**2+b**2)+c)/2)
 
 
-# Klassen
+# Classes
 # -----------------------------------------------------------------------------
 
-# Beginn des Programms
+# Beginning of the Programm
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':

@@ -6,17 +6,17 @@
 # Compute the volume and surface area of cylinder with math.pi
 
 
-# Autoren:
+# Author:
 # Christopher Mahn
 
 # #############################################################################
 
-# Import von Bibliotheken
+# Import of Libraries
 # -----------------------------------------------------------------------------
 
 import math as m
 
-# Funktionen
+# Functions
 # -----------------------------------------------------------------------------
 
 def cylinder_volume(r, h):
@@ -25,10 +25,10 @@ def cylinder_volume(r, h):
 def cylinder_surface(r, h):
     return(2*m.pi*(r**2)+2*m.pi*r*h)
 
-# Klassen
+# Classes
 # -----------------------------------------------------------------------------
 
-# Beginn des Programms
+# Beginning of the Programm
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
