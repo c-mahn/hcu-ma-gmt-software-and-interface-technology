@@ -256,4 +256,4 @@ def test_pwgen_weak_different():
 # -----------------------------------------------------------------------------
 
 if __name__ == '__main__':
-    print(pwgen("weak"))
+    pass
