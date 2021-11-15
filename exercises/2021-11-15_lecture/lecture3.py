@@ -1,4 +1,4 @@
-# 5.75 Task & Break
+# Test Driven Development - slide 16
 # #############################################################################
 
 # Think of test cases. What positive, negative and edge cases can you think of?
@@ -15,13 +15,12 @@
 # -----------------------------------------------------------------------------
 
 # import math as m
-from main import makelist
 
 # Functions
 # -----------------------------------------------------------------------------
 
 
-''' def makelist(inputlist):
+def makelist(inputlist):
     if(type(inputlist) != list):
         return(TypeError)
     result = ""
@@ -31,44 +30,8 @@ from main import makelist
         elif(i == 0):
             result = str(e)
         else:
-            result += f'; {e}'
-    return(result) '''
-
-
-def test_makelist_01():
-    assert(makelist([5.0, 7, 13, 9.45, 3.14, 7.77]) == "5.0; 7; 13; 9.45; 3.14; 7.77")
-    
-    
-def test_makelist_02():
-    assert(makelist([]) == "")
-    
-    
-def test_makelist_03():
-    assert(makelist(["one"]) == TypeError)
-    
-    
-def test_makelist_04():
-    assert(makelist(1) == TypeError)
-    
-    
-def test_makelist_05():
-    assert(makelist([1]) == "1")
-    
-    
-def test_makelist_06():
-    assert(makelist([1, 2, 3, 4, 5, 6, 0]) == "1; 2; 3; 4; 5; 6; 0")
-    
-    
-def test_makelist_07():
-    assert(makelist([-1]) == "-1")
-    
-    
-def test_makelist_08():
-    assert(makelist([1, 0, -1]) == "1; 0; -1")
-    
-    
-def test_makelist_09():
-    assert(makelist([1.1, 0, -1.1]) == "1.1; 0; -1.1")
+            result += f"; {e}"
+    return(result)
 
 
 # Classes
