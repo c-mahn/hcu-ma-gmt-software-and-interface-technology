@@ -1,8 +1,34 @@
 # Mandatory exercise 3
 # #############################################################################
 
-# Description of the task
+# We will do something of actual use this time: you are supposed 
+# to write a function that generates a password and the according tests!
+# However, there are rules to the password generator because we have
+# two types of passwords we can generate: strong ones and weak ones
 
+# The strong passwords should have a length of 8 – 12 characters
+# They have to contain at least one symbol: !"#$%&'()*+,-./:;<=>?
+# @[\]^_`{|}~
+# They have to contain at least one character:
+# abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# They have to contain at least one digit:
+# 0123456789
+
+# The strong passwords are not allowed to have duplicate elements
+# (upper/lowercase does not matter):
+# aX57A21#!    not allowed
+# ax57b21#!    allowed
+
+# The weak passwords should have a length of 6 – 8 characters
+# They are not allowed to contain symbols!
+# They have to contain at least one character:
+# abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# They have to contain at least one digit:
+# 0123456789
+
+# The weak passwords are not allowed to have duplicate elements as well:
+# a12A21gG     not allowed
+# ag5721w      allowed
 
 # Author:
 # Christopher Mahn
