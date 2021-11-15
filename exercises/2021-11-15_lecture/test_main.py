@@ -15,13 +15,13 @@
 # -----------------------------------------------------------------------------
 
 # import math as m
-# import 2021-11-15_lecture-exercise
+from main import makelist
 
 # Functions
 # -----------------------------------------------------------------------------
 
 
-def makelist(inputlist):
+''' def makelist(inputlist):
     if(type(inputlist) != list):
         return(TypeError)
     result = ""
@@ -32,7 +32,7 @@ def makelist(inputlist):
             result = str(e)
         else:
             result += f'; {e}'
-    return(result)
+    return(result) '''
 
 
 def test_makelist_01():

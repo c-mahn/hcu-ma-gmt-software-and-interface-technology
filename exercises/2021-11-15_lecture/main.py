@@ -21,15 +21,17 @@
 
 
 def makelist(inputlist):
-    if(type(inputlist) != List):
+    if(type(inputlist) != list):
         return(TypeError)
+    result = ""
     for i, e in enumerate(inputlist):
-        if(type(e) != int && type(e) != float):
+        if(type(e) != int and type(e) != float):
             return(TypeError)
         elif(i == 0):
-            result = e
+            result = str(e)
         else:
-            result += f"; {i}"
+            result += f"; {e}"
+    return(result)
 
 
 # Classes
