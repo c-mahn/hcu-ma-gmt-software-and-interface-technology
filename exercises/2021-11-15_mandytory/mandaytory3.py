@@ -13,13 +13,116 @@
 # -----------------------------------------------------------------------------
 
 # import math as m
+import string as st
+import random as r
 
 # Functions
 # -----------------------------------------------------------------------------
 
 
-def function():
-    return(None)
+def pwgen(password_type=None):
+    """
+    This function generates a strong or weak password.
+
+    Args:
+        password_type ([string]): [either "strong" or "weak"]
+    """
+    
+    # Setting for Password-Generation
+    if(password_type == "strong"):
+        valid_password_type = True
+        pw_length_min = 8
+        pw_length_max = 12
+        contain_lowercase_letters = True
+        contain_uppercase_letters = True
+        contain_numbers = True
+        contain_symbols = True
+    elif(password_type == "weak"):
+        valid_password_type = True
+        pw_length_min = 6
+        pw_length_max = 8
+        contain_lowercase_letters = True
+        contain_uppercase_letters = True
+        contain_numbers = True
+        contain_symbols = False
+    else:
+        valid_password_type = False
+        
+    # Generate Password with Setting
+    if(valid_password_type):
+        
+        # Adding character-selection
+        pw_chars = ""
+        if(contain_lowercase_letters or contain_uppercase_letters):
+            pw_chars += st.ascii_lowercase
+        if(contain_numbers):
+            pw_chars += st.digits
+        if(contain_symbols):
+            pw_chars += st.punctuation
+
+        # make randomised password with lowercase letters
+        valid_password = False
+        while(valid_password == False):
+            pw_length = r.randint(pw_length_min, pw_length_max)
+            pw_chars = list(pw_chars)
+            r.shuffle(pw_chars)
+            password = ""
+            for i in range(pw_length):
+                password += pw_chars[i]
+
+            # Uppercase and lowercase randomisation if needed
+            if(contain_uppercase_letters == True and contain_lowercase_letters == True):
+                password = list(password)
+                for i, e in enumerate(password):
+                    if(e in st.ascii_lowercase):
+                        if(r.getrandbits(1) == 1):
+                            password[i] = e.upper()
+                password = "".join(password)
+            elif(contain_uppercase_letters == True and contain_lowercase_letters == False):
+                password = password.upper()
+
+            # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+            # Check if password has all character-selections contained
+            valid_password = True
+
+            # Check for lowercase letters
+            if(contain_lowercase_letters):
+                check_pass = False
+                for i in password:
+                    if(i in st.ascii_lowercase):
+                        check_pass = True
+            if(check_pass is not True):
+                valid_password = False
+
+            # Check for uppercase letters
+            if(contain_uppercase_letters):
+                check_pass = False
+                for i in password:
+                    if(i in st.ascii_uppercase):
+                        check_pass = True
+            if(check_pass is not True):
+                valid_password = False
+
+            # Check for numbers
+            if(contain_numbers):
+                check_pass = False
+                for i in password:
+                    if(i in st.digits):
+                        check_pass = True
+            if(check_pass is not True):
+                valid_password = False
+
+            # Check for symbols
+            if(contain_symbols):
+                check_pass = False
+                for i in password:
+                    if(i in st.punctuation):
+                        check_pass = True
+            if(check_pass is not True):
+                valid_password = False
+        return(password)
+    else:
+        return(ValueError)
 
 
 # Classes
