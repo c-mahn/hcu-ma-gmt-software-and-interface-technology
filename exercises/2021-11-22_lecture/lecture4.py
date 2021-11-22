@@ -63,9 +63,11 @@
 # -----------------------------------------------------------------------------
 
 
+# Task 0
 ages = lambda list_of_birthyears: [2021-x for x in list_of_birthyears]
 
 
+# Task 1
 def overlapping(list1, list2):
     """
     Compares 2 lists and returns elements contained in both lists back.
@@ -82,6 +84,7 @@ def overlapping(list1, list2):
     return(result)
 
 
+# Task 2
 def tree_print(list1):
     """
     Prints a list and removes one list element each iteration.
@@ -97,6 +100,7 @@ def tree_print(list1):
     return(result)
 
 
+# Task 3
 def dot_replace(string1):
     """
     This function replaces dots with spaces in a string. If the string ends
@@ -117,6 +121,7 @@ def dot_replace(string1):
     return(result)
 
 
+# Task 10
 def alternating(list1):
     """
     This function prints every second element in a list.
@@ -132,6 +137,7 @@ def alternating(list1):
     return(result)
 
 
+# Task 11
 def multiples(int1, int2):
     """
     This function generates a list with multiples of an integer, until the
