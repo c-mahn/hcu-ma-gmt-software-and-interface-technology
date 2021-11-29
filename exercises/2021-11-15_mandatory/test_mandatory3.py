@@ -39,7 +39,7 @@
 # -----------------------------------------------------------------------------
 
 # import math as m
-from mandaytory3 import pwgen
+from mandatory3 import pwgen
 import re
 import string as st
 
